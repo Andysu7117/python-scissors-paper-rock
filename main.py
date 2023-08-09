@@ -6,7 +6,9 @@ random_number = random.randint(0, 2)
 computer_choice = options[random_number]
 
 # Cases for tie, win else lose
-if userchoice == computer_choice:
+if userchoice.upper() not in options:
+    print("You have entered an invalid option")
+elif userchoice == computer_choice:
     print(f"Computer chose {computer_choice} you tied")
 elif userchoice.upper() == 'S' and computer_choice == 'P':
     print(f"Computer chose {computer_choice} you win")
